@@ -6,7 +6,7 @@ In microservice architectures, data is stored across heterogeneous systems, with
 
 Aletheia solves this problem through static analysis, identifying semantic violations in microservice ecosystems (i.e., service interactions and operations that break data integrity) for various types of integrity constraints, including entity integrity, referential integrity, and uniqueness.
 
-You can check our three main repositories:
+You can check our two main repositories:
 
 - [Aletheia](https://github.com/aletheia-microservices/aletheia): core implementation of our analysis framework
 - [Aletheia - Artifact OSDI'26](https://github.com/aletheia-microservices/aletheia-artifact-osdi26): artifacts and steps to reproduce experiments from our paper "Aletheia: Automated Detection of Data Integrity Violations in Microservices" accepted in OSDI'26
