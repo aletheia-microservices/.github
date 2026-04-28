@@ -10,4 +10,3 @@ You can check our three main repositories:
 
 - [Aletheia](https://github.com/aletheia-microservices/aletheia): core implementation of our analysis framework
 - [Aletheia - Artifact OSDI'26](https://github.com/aletheia-microservices/aletheia-artifact-osdi26): artifacts and steps to reproduce experiments from our paper "Aletheia: Automated Detection of Data Integrity Violations in Microservices" accepted in OSDI'26
-- [Blueprint](https://github.com/aletheia-microservices/blueprint): fork of Blueprint containing the applications analyzed and included in the paper
