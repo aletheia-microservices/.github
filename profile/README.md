@@ -9,8 +9,8 @@ Aletheia solves this problem through static analysis, identifying semantic viola
 You can check our two main repositories:
 
 - [Aletheia](https://github.com/aletheia-microservices/aletheia): implementation of Aletheia framework
-- [Aletheia - Artifact OSDI'26](https://github.com/aletheia-microservices/aletheia-artifact-osdi26): artifacts and instructions to reproduce the experiments from the paper "Aletheia: Automated Detection of Data Integrity Violations in Microservices", accepted in OSDI'26
+- [Aletheia - OSDI'26 Artifact](https://github.com/aletheia-microservices/aletheia-artifact-osdi26): artifacts and instructions to reproduce the experiments from the paper "Aletheia: Automated Detection of Data Integrity Violations in Microservices", accepted in OSDI'26
 
-Additional repositories used in the Aletheia OSDI26 artifact:
-- [Synthetic Microservice Applications Generator](https://github.com/aletheia-microservices/generator-synthetic-apps): generator of synthetic microservice applications based on call graph characteristics
+Additional repositories:
+- [Synthetic Microservice Applications Generator](https://github.com/aletheia-microservices/generator-synthetic-apps): generator of synthetic microservice applications based on call graph characteristics - used in the Aletheia OSDI'26 artifact
 - [Fork of Blueprint's Repository](https://github.com/aletheia-microservices/blueprint): fork containing the Blueprint compiler and all applications analyzed by Aletheia
