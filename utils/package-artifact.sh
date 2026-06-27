@@ -1,22 +1,28 @@
 #!/usr/bin/env bash
 
+# Usage:
+#   ./package-artifact.sh
+
 set -e
 
 REPO_URL="https://github.com/aletheia-microservices/aletheia-artifact-osdi26.git"
-
 TARGET_DIR="aletheia-artifact-osdi26"
-
-ZIP_NAME="aletheia-artifact-osdi26.zip"
+#ZIP_NAME="aletheia-artifact-osdi26.zip"
+TAR_NAME="aletheia-artifact-osdi26.tar.gz"
+ARTIFACTS_DIR="artifacts"
 
 UNWANTED_FILES=(
     ".DS_Store"
     ".gitignore"
     ".gitmodules"
+    ".git"
 )
 
 UNWANTED_DIRS=(
     ".git"
 )
+
+mkdir -p "$ARTIFACTS_DIR"
 
 echo
 echo "[1/5] cloning repository..."
@@ -33,8 +39,8 @@ echo
 echo "[2/5] copying root README..."
 
 if [ -f "$TARGET_DIR/README.md" ]; then
-    cp "$TARGET_DIR/README.md" .
-    echo "copied: $TARGET_DIR/README.md -> ./README.md"
+    cp "$TARGET_DIR/README.md" "$ARTIFACTS_DIR/"
+    echo "copied: $TARGET_DIR/README.md -> $ARTIFACTS_DIR/README.md"
 else
     echo "warning: README.md not found in $TARGET_DIR"
 fi
@@ -78,17 +84,18 @@ for dir in "${UNWANTED_DIRS[@]}"; do
 done
 
 echo
-echo "[5/5] creating zip archive..."
+echo "[5/5] packaging artifact..."
 
 parent_dir="$(dirname "$TARGET_DIR")"
 folder_name="$(basename "$TARGET_DIR")"
 
 cd "$parent_dir"
 
-echo "zipping folder: $folder_name"
-echo "output zip: $ZIP_NAME"
+echo "archiving folder: $folder_name"
+echo "output archive: $ARTIFACTS_DIR/$TAR_NAME"
 
-zip -r --quiet "$ZIP_NAME" "$folder_name"
+# zip -r --quiet "$ARTIFACTS_DIR/$ZIP_NAME" "$folder_name"
+tar -czf "$ARTIFACTS_DIR/$TAR_NAME" "$folder_name"
 
 echo
 echo "done!"
