@@ -1,13 +1,11 @@
 # Aletheia
 
-**Aletheia: Automated Detection of Data Integrity Violations in Microservices**  
-*Mafalda Sofia Ferreira, João Ferreira Loff, João Garcia, and Rodrigo Rodrigues*  
+**Aletheia: Automated Detection of Data Integrity Violations in Microservices** [[USENIX Page]](https://www.usenix.org/conference/osdi26/presentation/ferreira) [[Paper]](https://www.usenix.org/system/files/osdi26-ferreira.pdf)<br>
+Mafalda Sofia Ferreira, João Ferreira Loff, João Garcia, and Rodrigo Rodrigues  
 *INESC-ID, Instituto Superior Técnico, Universidade de Lisboa*  
 *In Proceedings of the 20th USENIX Symposium on Operating Systems Design and Implementation (**OSDI ’26**)*
 
 ---
-
-Aletheia is a static analysis framework for automated detection of integrity violations in microservice codebases.
 
 In microservice architectures, data is stored across heterogeneous systems, with data schemas partitioned and managed by separate services. Due to the complexity of microservices, it can be almost impossible for developers to have a comprehensive understanding of the entire system, making it challenging to reason about and maintain data integrity at the application level. 
 
