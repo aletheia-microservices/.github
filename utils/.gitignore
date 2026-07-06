@@ -1,2 +1,6 @@
 artifacts/**
 aletheia-artifact-osdi26/**
+*.png
+.venv/**
+.DS_Store
+__pycache__/**
